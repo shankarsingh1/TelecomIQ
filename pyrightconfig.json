@@ -1,0 +1,31 @@
+{
+  "executionEnvironments": [
+    {
+      "root": "backend",
+      "extraPaths": [
+        "backend",
+        "."
+      ]
+    },
+    {
+      "root": ".",
+      "extraPaths": [
+        "backend",
+        "."
+      ]
+    }
+  ],
+  "include": [
+    "backend"
+  ],
+  "extraPaths": [
+    "backend",
+    "."
+  ],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.12",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "typeCheckingMode": "basic"
+}

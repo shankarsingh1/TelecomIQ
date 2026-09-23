@@ -1,0 +1,367 @@
+/* ==========================================================================
+   Gateway / Persona Login Box Stylesheet
+   Modern, Sleek, Centered Card Design
+   ========================================================================== */
+
+.gateway-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: radial-gradient(circle at 50% 20%, #f8faff 0%, #edf2f9 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+
+/* Ambient Background Glows */
+.gateway-ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-1 {
+  width: 420px;
+  height: 420px;
+  background: rgba(37, 99, 235, 0.12);
+  top: 15%;
+  left: 30%;
+}
+
+.glow-2 {
+  width: 380px;
+  height: 380px;
+  background: rgba(99, 102, 241, 0.1);
+  bottom: 10%;
+  right: 25%;
+}
+
+/* Centered Gateway Card */
+.gateway-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 24px;
+  padding: 2.25rem 2rem 1.75rem;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.02);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Transparent Active Session Tag */
+.gateway-active-session-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  border-radius: 12px;
+  font-size: 0.82rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.session-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.session-online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+  flex-shrink: 0;
+}
+
+.session-user-label {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.session-user-name {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.session-user-role {
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.session-action-btn {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: transparent;
+}
+
+.session-action-btn.switch-btn {
+  border: 1px solid #cbd5e1;
+  color: #475569;
+}
+
+.session-action-btn.switch-btn:hover {
+  background: rgba(241, 245, 249, 0.8);
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.session-action-btn.logout-btn {
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #ef4444;
+}
+
+.session-action-btn.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+/* Card Header */
+.gateway-header {
+  margin-bottom: 1.75rem;
+}
+
+.gateway-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 6px 14px 6px 8px;
+  border-radius: 30px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.25rem;
+}
+
+.gateway-logo-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gateway-brand-title {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.gateway-brand-main {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.gateway-brand-sub {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.gateway-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.4rem 0;
+}
+
+.gateway-subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Role Selection List */
+.gateway-roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1.75rem;
+}
+
+.gateway-role-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.gateway-role-btn:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+}
+
+.role-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.customer-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.agent-icon {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.admin-icon {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.gateway-role-btn:hover .customer-icon {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.gateway-role-btn:hover .agent-icon {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.gateway-role-btn:hover .admin-icon {
+  background: #059669;
+  color: #ffffff;
+}
+
+.role-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.role-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.role-chip {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.chip-blue {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.chip-indigo {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.chip-emerald {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.role-desc {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+.role-arrow {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.gateway-role-btn:hover .role-arrow {
+  color: #0f172a;
+  transform: translateX(3px);
+}
+
+/* Card Footer */
+.gateway-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+}
+
+.btn-explore-overview {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-explore-overview:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+}

@@ -1,0 +1,185 @@
+/* ==========================================================================
+   TelecomIQ — App-level Stylesheet
+   Minimalist, Clean Enterprise UI (Inspired by Kukie.io)
+   ========================================================================== */
+
+* {
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-page);
+  color: var(--text-body);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   App Top Header (For Form, Profile, and Standalone Views)
+   ══════════════════════════════════════════════════════════════════════════ */
+.profile-header,
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0 2rem;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body:not(.light-theme) .profile-header,
+body:not(.light-theme) .app-header {
+  background: rgba(11, 15, 25, 0.85);
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-title);
+  letter-spacing: -0.025em;
+}
+
+.header-left .logo svg {
+  color: var(--color-primary-600);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: var(--text-title);
+  background: var(--slate-100);
+  border-color: var(--slate-300);
+}
+
+body:not(.light-theme) .nav-btn:hover {
+  background: var(--slate-800);
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Form Content Wrapper & Layout
+   ══════════════════════════════════════════════════════════════════════════ */
+.form-content-wrapper {
+  padding: 2.5rem 1.5rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-section {
+  width: 100%;
+  max-width: 860px;
+  margin-top: 2rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Clean Modern Floating Support Assistant Button
+   ══════════════════════════════════════════════════════════════════════════ */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--color-primary-600);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(27, 77, 255, 0.35);
+  border: 1px solid var(--color-primary-500);
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chatbot-toggle:hover {
+  background: var(--color-primary-700);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 77, 255, 0.4);
+}
+
+.chatbot-toggle svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+}
+
+.chatbot-badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 12px;
+  height: 12px;
+  background: var(--success);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Responsive Adjustments
+   ══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .profile-header,
+  .app-header {
+    padding: 0 1rem;
+    height: 60px;
+  }
+
+  .header-left .logo span {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 0.775rem;
+  }
+
+  .form-content-wrapper {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
